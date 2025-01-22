@@ -22,6 +22,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     });
 
+    // Update the positioning for mobile devices
+    function updatePositioning() {
+        if (window.innerWidth <= 768) { // Mobile breakpoint
+            if (samScroll.style.display === 'block') {
+                samScroll.style.top = '50%';
+                samScroll.style.left = '50%';
+                samScroll.style.transform = 'translate(-50%, -50%)';
+            }
+            if (presentOpen.style.display === 'block') {
+                presentOpen.style.top = '50%';
+                presentOpen.style.left = '50%';
+                presentOpen.style.transform = 'translate(-50%, -50%)';
+            }
+        }
+    }
+
+    // Call on initial load and window resize
+    updatePositioning();
+    window.addEventListener('resize', updatePositioning);
+
     // Add click event to presentOpen (closed scroll)
     presentOpen.addEventListener('click', function(event) {
         console.log('Closed scroll clicked'); // Debug line
@@ -49,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 samScroll.addEventListener('click', function() {
     samScroll.style.display = 'block'; // Hide the closed-scroll element when it is clicked
 }); 
+
 
 
 

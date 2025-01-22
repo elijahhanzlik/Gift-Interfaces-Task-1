@@ -187,3 +187,38 @@ header {
 .cheerful-link4:hover {
     color: gold;
 }
+
+
+@media screen and (max-width: 768px) {
+    .present,
+    .presentOpen,
+    .Sam-Scroll {
+        max-width: 80vw; /* Limit width to 80% of viewport width */
+        height: auto;
+        position: absolute;
+    }
+
+    #clickHereText,
+    .scrollClick {
+        font-size: 16px; /* Adjust text size for mobile */
+        width: 80%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .present img,
+    .presentOpen img,
+    .Sam-Scroll img {
+        width: 300px;  /* Slightly smaller than desktop but larger than mobile */
+    }
+
+    .cheerful-link,
+    .cheerful-link2,
+    .cheerful-link3,
+    .cheerful-link4 {
+        font-size: 18px;  /* Adjusted for tablet viewing */
+    }
+}
