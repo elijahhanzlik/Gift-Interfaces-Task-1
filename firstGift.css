@@ -1,0 +1,189 @@
+body {
+    background-image: url('./Sam-room.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    text-align: center;
+    color: rgb(255, 196, 0);       
+}
+
+@-webkit-keyframes headerBlink {  
+    0% { background-color: purple; }
+    16.67% { background-color: blue; }
+    33.33% { background-color: green; }
+    50% { background-color: navy; }
+    66.67% { background-color: red; }
+    83.33% { background-color: black; }
+    100% { background-color: purple; }
+  }
+  
+  .blinkdiv {
+      height: 40px;
+      -webkit-animation-name: headerBlink;  
+      -webkit-animation-iteration-count: infinite;  
+      -webkit-animation-duration: 10s; 
+  }   
+  .present {
+    position: relative;
+  }
+
+  .present img {
+    width: 200px;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 300px;
+  }
+
+  .clickHere { 
+    animation: bounce 1s infinite;
+    background-color: transparent;
+    width: 40px;
+    height: auto;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    top: 300px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+ @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+ }
+
+ #clickHereText {
+    color: gold;
+    height: 40px;
+    -webkit-animation-name: clickHereTextBlink;  
+    -webkit-animation-iteration-count: infinite;  
+    -webkit-animation-duration: 1.5s; 
+    pointer-events: none;
+    user-select: none;
+ }
+
+ @-webkit-keyframes clickHereTextBlink {  
+    0% { back: gold; }
+    50% { color: red; }
+    100% { color: gold; }
+  }
+
+.presentOpen {
+    display: none;
+    animation: spinAndGrow 3s ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes spinAndGrow {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(1080deg); /* 3 full rotations (360 * 3) */
+        opacity: 1;
+    }
+}
+  
+.scrollClick {
+        animation: bounce 1s infinite;
+        background-color: transparent;
+        width: 40px;
+        height: auto;
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+        top: 300px;
+        font-size: 20px;
+        font-weight: bold;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .scrollClick p {
+        color: gold;
+      } 
+
+@keyframes rotateAndVanish {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(2160deg);
+        opacity: 0;
+    }
+} 
+
+.Sam-Scroll {
+    position: relative;
+}
+
+.Sam-Scroll img {
+    width: 400px;
+    height: auto;
+    margin-top: -400px;
+}
+
+.cheerful-link {
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: black;
+    cursor: pointer;
+}
+
+.cheerful-link:hover {
+    color: gold;
+}
+      
+.cheerful-link2 {
+    position: absolute;
+    top: 215px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: black;
+    cursor: pointer;
+}
+
+.cheerful-link2:hover {
+    color: gold;
+}
+
+.cheerful-link3 {
+    position: absolute;
+    top: 255px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: black;
+    cursor: pointer;
+}
+
+.cheerful-link3:hover {
+    color: gold;
+}
+
+.cheerful-link4 {
+    position: absolute;
+    top: 295px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: black;
+    cursor: pointer;
+}
+
+.cheerful-link4:hover {
+    color: gold;
+}
